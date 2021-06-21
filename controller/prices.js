@@ -9,5 +9,4 @@ const getPriceByBarcodes = (req, res) => {
 
 module.exports = {
   getPriceByBarcodes,
-  getPriceByProductId,
 }
