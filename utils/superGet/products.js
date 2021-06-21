@@ -22,7 +22,7 @@ const getProductsByName = async (namesArray) => {
     action: 'GetProductsByName',
     product_name: namesArray,
   }
-  const res = postURL(params)
+  const res = await postURL(params)
   return res;
 }
 

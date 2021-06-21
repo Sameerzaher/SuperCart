@@ -3,14 +3,14 @@ const productsApi = require('../utils/superGet/products')
 const getProductsByBarcode = (req, res) => {
   const { body: { barcodes } } = req;
   productsApi.getProductsByBarcode(barcodes).then(result => {
-    console.log('result', result); // todo implement Func
+    res.status(200).json({ data: result.data })
   })
 };
 
 const getProductsByName = (req, res) => {
-  const { body: { productsNames } } = req;
-  productsApi.getProductsByName(productsNames).then(result => {
-    console.log('result', result); // todo implement Func
+  const { body: { productNames } } = req;
+  productsApi.getProductsByName(productNames).then(result => {
+    res.status(200).json({ data: result.data })
   })
 };
 
