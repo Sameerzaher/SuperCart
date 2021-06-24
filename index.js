@@ -17,7 +17,7 @@ app.options('*', cors());
 // handle all the requests in the router
 app.use('/api', router);
 
-app.get('/', () => getProductsByBarcode())
+app.post('/', () => getProductsByBarcode())
 server.listen(config.port, () => {
   console.log(`App is listening on port ${config.port}`);
 });

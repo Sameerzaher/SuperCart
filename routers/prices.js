@@ -3,6 +3,6 @@ const c = require('../controller/prices');
 
 const router = express.Router();
 
-router.get('/barcode/:storeId', c.getPriceByBarcodes)
+router.post('/barcode/:storeId', c.getPriceByBarcodes)
 
 module.exports = router
